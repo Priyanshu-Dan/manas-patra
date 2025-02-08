@@ -18,7 +18,7 @@ const handler = NextAuth({
   ],
   adapter: MongoDBAdapter(clientPromise), // Save user data in MongoDB
   session: {
-    strategy: "jwt", // or "database" if you want session persistence
+    strategy: "database", // or "database" if you want session persistence
   },
   callbacks: {
     async session({ session, user }) {
