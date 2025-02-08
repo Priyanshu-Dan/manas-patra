@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-semibold dark:text-white">
+          <Link href="/" className="text-xl lg:text-2xl font-semibold dark:text-white">
            ManasPatra
           </Link>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
               if(!session)
               signIn()
              else signOut()
-              }} className="text-white bg-white bg-opacity-0 hover:bg-opacity-10 hover:text-gray-300 transition">
+              }} className="text-white cursor-pointer bg-white bg-opacity-0 hover:bg-opacity-10 hover:text-gray-300 transition">
                {!session?"Sign In":"Sign Out"}
             </div>
             <NavLink href="/about">About</NavLink>
@@ -45,13 +45,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden transition">
           <div className="px-4 py-3 flex flex-col space-y-3 ">
             <div onClick={()=>{
               if(!session)
               signIn()
              else signOut()
-             }} className="text-white bg-white bg-opacity-0 hover:bg-opacity-10 hover:text-gray-300 transition">
+             }} className="text-white cursor-pointer bg-white bg-opacity-0 hover:bg-opacity-10 hover:text-gray-300 transition">
                 {!session?"Sign In":"Sign Out"}
             </div>
             <NavLink href="/about">About</NavLink>
